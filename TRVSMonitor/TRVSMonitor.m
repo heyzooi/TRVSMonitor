@@ -52,7 +52,7 @@
           signalHandler:(TRVSMonitorHandler)handler {
   NSDate *start = [NSDate date];
 
-  while (self.signalsRemaining > 0) {
+  while (self.signalsRemaining > 0) @autoreleasepool {
     [[NSRunLoop currentRunLoop]
         runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
 
